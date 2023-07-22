@@ -1,83 +1,171 @@
-// Email input event listener
-const emailInput = document.querySelector('.email');
-const paperPlaneIcon = document.querySelector('.icon-paper-plane');
+var counter = 1;
+$(document).ready(function () {
 
-emailInput.addEventListener("change", handleInputChange);
-emailInput.addEventListener("keyup", handleInputChange);
-emailInput.addEventListener("paste", handleInputChange);
+ var erroEle = $('.error-message'),
+  focusInput = $('.questions').find('.active');
 
-function handleInputChange() {
- if (emailInput.value) {
-  paperPlaneIcon.classList.add("next");
- } else {
-  paperPlaneIcon.classList.remove("next");
+ $('.navigation a').click(function () {
+  nextMaster('navi');
+
+  var thisInput = $('#' + $(this).attr('data-ref'));
+  $('.active').removeClass('active');
+  thisInput.focus().addClass('active')
+  thisInput.closest('li').animate({
+   marginTop: '0px',
+   opacity: 1
+  }, 200);
+  thisInput.closest('li').prevAll('li').animate({
+   marginTop: '-150px',
+   opacity: 0
+  }, 200)
+  //                     .AddClass('done');
+
+  thisInput.closest('li').nextAll('li').animate({
+   marginTop: '150px',
+   opacity: 0
+  }, 200)
+  //                    .RemoveClass('done');
+  errorMessage(erroEle, '', 'hidden', 0);
+
+ });
+
+ if (focusInput.val() != '') {
+  $('#next-page').css('opacity', 1);
  }
-}
 
-// Email button click event listener
-const emailButton = document.querySelector('.next-button.email');
+ $(document).keypress(function (event) {
+  if (event.which == 13) {
+   nextMaster('keypress');
+   event.preventDefault();
+  }
 
-emailButton.addEventListener("click", function () {
- console.log("Something");
- const emailSection = document.querySelector('.email-section');
- const passwordSection = document.querySelector('.password-section');
+  $('#next-page').click(function () {
+   var focusInput = $('.questions').find('.active');
+   nextMaster('nextpage');
 
- emailSection.classList.add("fold-up");
- passwordSection.classList.remove("folded");
+  })
+
+ });
+
+ function nextMaster(type) {
+  var focusInput = $('.questions').find('.active');
+  if (focusInput.val() != '') {
+   if ((focusInput.attr('name') == 'name' || focusInput.attr('name') == 'username') && focusInput.val().length < 2) {
+    errorMessage(erroEle, "isn't your " + focusInput.attr('name') + " bit small. ", 'visible', 1);
+   } else if (focusInput.attr('name') == 'email' && !validateEmail(focusInput.val())) {
+    errorMessage(erroEle, "It doesn't look like a " + focusInput.attr('name'), 'visible', 1);
+   } else if (focusInput.attr('name') == 'phone' && !validatePhone(focusInput.val())) {
+    errorMessage(erroEle, "It doesn't look like a " + focusInput.attr('name'), 'visible', 1);
+   } else {
+
+    if (type != 'navi') showLi(focusInput);
+    $('#next-page').css('opacity', 0);
+    errorMessage(erroEle, '', 'hidden', 0);
+   }
+  } else if (type == 'keypress') {
+   errorMessage(erroEle, 'please enter your ' + focusInput.attr('name'), 'visible', 1);
+  }
+
+ }
+
+ $("input[type='text']").keyup(function (event) {
+  var focusInput = $(this);
+  if (focusInput.val().length > 1) {
+   if ((focusInput.attr('name') == 'email' && !validateEmail(focusInput.val())) ||
+    (focusInput.attr('name') == 'phone' && !validatePhone(focusInput.val()))) {
+    $('#next-page').css('opacity', 0);
+   } else {
+    $('#next-page').css('opacity', 1);
+   }
+
+  } else {
+   $('#next-page').css('opacity', 0);
+  }
+ });
+
+ $("#password").keyup(function (event) {
+  var focusInput = $(this);
+  $("#viewpswd").val(focusInput.val());
+  if (focusInput.val().length > 1) {
+   $('#next-page').css('opacity', 1);
+  }
+ });
+
+ $('#signup').click(function () {
+  $('.navigation').fadeOut(400).css({
+   'display': 'none'
+  });
+  $('#sign-form').fadeOut(400).css({
+   'display': 'none'
+  });
+  $(this).fadeOut(400).css({
+   'display': 'none'
+  });
+  $('#wf').animate({
+   opacity: 1,
+   marginTop: '1em'
+  }, 500).css({
+   'display': 'block'
+  });
+ });
+
+ $('#show-pwd').mousedown(function () {
+  $(this).toggleClass('view').toggleClass('hide');
+  $('#password').css('opacity', 0);
+  $('#viewpswd').css('opacity', 1);
+ }).mouseup(function () {
+  $(this).toggleClass('view').toggleClass('hide');
+  $('#password').css('opacity', 1);
+  $('#viewpswd').css('opacity', 0);
+ });
+
 });
 
-// Password input event listener
-const passwordInput = document.querySelector('.password');
-const lockIcon = document.querySelector('.icon-lock');
+function showLi(focusInput) {
 
-passwordInput.addEventListener("change", handlePasswordChange);
-passwordInput.addEventListener("keyup", handlePasswordChange);
-passwordInput.addEventListener("paste", handlePasswordChange);
+ focusInput.closest('li').animate({
+  marginTop: '-150px',
+  opacity: 0
+ }, 200);
 
-function handlePasswordChange() {
- if (passwordInput.value) {
-  lockIcon.classList.add("next");
+ console.log(focusInput.closest('li'));
+
+ if (focusInput.attr('id') == 'viewpswd') {
+  $("[data-ref='" + focusInput.attr('id') + "']")
+   .addClass('done').html('password');
+  //                    .html(Array(focusInput.val().length+1).join("*"));
  } else {
-  lockIcon.classList.remove("next");
+  $("[data-ref='" + focusInput.attr('id') + "']").addClass('done').html(focusInput.val());
  }
+
+ focusInput.removeClass('active');
+ counter++;
+
+ var nextli = focusInput.closest('li').next('li');
+
+ nextli.animate({
+  marginTop: '0px',
+  opacity: 1
+ }, 200);
+
+ nextli.find('input').focus().addClass('active');
+
 }
 
-// Password button click event listener
-const passwordButton = document.querySelector('.next-button.password');
-
-passwordButton.addEventListener("click", function () {
- console.log("Something");
- const passwordSection = document.querySelector('.password-section');
- const repeatPasswordSection = document.querySelector('.repeat-password-section');
-
- passwordSection.classList.add("fold-up");
- repeatPasswordSection.classList.remove("folded");
-});
-
-// Repeat password input event listener
-const repeatPasswordInput = document.querySelector('.repeat-password');
-const repeatLockIcon = document.querySelector('.icon-repeat-lock');
-
-repeatPasswordInput.addEventListener("change", handleRepeatPasswordChange);
-repeatPasswordInput.addEventListener("keyup", handleRepeatPasswordChange);
-repeatPasswordInput.addEventListener("paste", handleRepeatPasswordChange);
-
-function handleRepeatPasswordChange() {
- if (repeatPasswordInput.value) {
-  repeatLockIcon.classList.add("next");
- } else {
-  repeatLockIcon.classList.remove("next");
- }
+function errorMessage(textmeg, appendString, visib, opaci) {
+ textmeg.css({
+  visibility: visib
+ }).animate({
+  opacity: opaci
+ }).html(appendString)
 }
 
-// Repeat password button click event listener
-const repeatPasswordButton = document.querySelector('.next-button.repeat-password');
+function validateEmail(email) {
+ var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ return re.test(email);
+}
 
-repeatPasswordButton.addEventListener("click", function () {
- console.log("Something");
- const repeatPasswordSection = document.querySelector('.repeat-password-section');
- const successSection = document.querySelector('.success');
-
- repeatPasswordSection.classList.add("fold-up");
- successSection.style.marginTop = "0";
-});
+function validatePhone(phone) {
+ var re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+ return re.test(phone);
+}
