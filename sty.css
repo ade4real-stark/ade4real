@@ -1,0 +1,259 @@
+.background {
+    background: url(img/pic\ \(3\).jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.baner {
+    height: auto;
+    background: url(img/pic\ \(3\).jpg) center center;
+    background-size: cover;
+}
+
+.overlay {
+    
+  height: 100vh;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.baner h1 {
+    color: #fff;
+    font-size: 5em;
+    font-family: lugrasimo;
+    font-weight: 900;
+    position: absolute;
+    top: 20vh;
+    font-variant: small-caps;
+    text-align: center;
+    padding: 5%;
+}
+
+/* CSS for Hire Me Page */
+.questionnaire {
+    padding: 40px;
+    color: white;
+}
+
+.questionnaire h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.questionnaire form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.questionnaire form input,
+.questionnaire form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+
+.questionnaire form button {
+    padding: 10px 20px;
+    background-color: #00ffff;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.price-section {
+    padding: 40px;
+
+}
+
+.price-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: lugrasimo;
+    color: #fff;
+}
+
+.price-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.price-box {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 2px 2px 5px white;
+}
+
+.price-box ul,
+.price-box ul li {
+    margin-top: 10px;
+}
+
+.price-box i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.price-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price-box p {
+    margin-bottom: 20px;
+}
+
+.price-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price-box p {
+    margin-bottom: 20px;
+}
+
+.contact-me {
+    padding: 40px;
+}
+
+.contact-me h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: lugrasimo;
+    color: white;
+}
+
+.cont-boxes {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+}
+
+.cont-box {
+    width: 30%;
+    padding: 20px;
+    background-color: #e2dfdf;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.cont-box i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cont-box a {
+    padding: 10px;
+}
+
+.cont-box .fa-facebook {
+    background: linear-gradient(90deg, #0400fc, #00dbde);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cont-box .fa-instagram {
+    background: linear-gradient(20deg, #c100fc, orangered, rgb(255, 0, 43));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cont-box .fa-whatsapp {
+    background: linear-gradient(90deg, #00fc3f, #09ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CSS for Footer */
+.footer {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul li {
+    margin-right: 10px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width:900px) {
+    .baner h1 {
+        font-size: 3.7rem;
+    }
+}
+
+@media (max-width:765px) {
+    .baner h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width:600px) {
+    .price-boxes {
+        display: block;
+        columns: 1 12rem;
+    }
+
+    .price-box {
+        width: auto;
+        height: auto;
+        margin: 10px;
+
+    }
+
+    .cont-boxes {
+        display: block;
+        columns: 1 12rem;
+    }
+
+    .cont-box {
+        width: auto;
+        height: auto;
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width:360px) {
+    .footer-nav ul {
+        display: none;
+    }
+
+}
