@@ -32,7 +32,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/ade4real/portfolio-website.git
+git clone https://github.com/ade4real-stark/ade4real.git
 Alternatively, you can download the ZIP file and extract it.
 
 Open the index.html file in your web browser to view the website.
