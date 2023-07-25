@@ -7,43 +7,42 @@
   <title>Ade4real</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sty.css">
-  <link rel="stylesheet" href="css/all.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <img src="img/logo.png" alt="mylogo">
-      <a href="index.html">
-        <h1>Ade<span>4real</span></h1>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-light" href="index.html">
+        <img src="img/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-center text-light">
+        <h1 class="font-monospace">Ade<span class="color">4real</span></h1>
       </a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
+          class="navbar-toggler-icon bg-light"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center align-items-center font-monospace">
+          <li class="nav-item">
+            <a class="nav-link link-light active" href="hire.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#web package">Web Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#Contact">Contact Me</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <input type="checkbox" id="nav-check" hidden>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">About Me</a></li>
-        <li><a href="index.html">My Services</a></li>
-        <li><a href="index.html">My Skills</a></li>
-        <li><a href="hire.html">Hire Me</a></li>
-
-      </ul>
-    </nav>
-    <label for="nav-check" class="hamburger"><i class="fa fa-bars"></i></label>
-  </header>
-  <!-- Banner -->
-  <div class="baner" id="5">
-    <div class="overlay"></div>
-    <h1>Let me me build a beautiful website for you</h1>
-  </div>
-
+  </nav>
   <div class="background">
     <!-- Questionnaire -->
     <section class="questionnaire" id="questionnaire">
       <h2>Project Inquiry</h2>
-      <form target="_blank" action="https://formsubmit.co/el/heyeya">
+      <form target="_blank" action="https://formsubmit.co/jadegboye581@gmail.com" method="POST">
         <label for="project-type">What type of project do you need?</label>
         <input type="text" id="project-type" name="project-type" required>
 
@@ -56,76 +55,152 @@
         <button type="submit">Submit</button>
       </form>
     </section>
-    <!-- Price Section -->
-    <section class="price-section">
-      <h1>Website Packages (Negotiation Possible)</h1>
-      <div class="price-boxes">
-        <div class="price-box">
-          <i class="fas fa-desktop"></i>
-          <h2>Single-page Website</h2>
-          <h4>Price: &#8358 5000</h4>
-          <ul>
-            <li>A single page website</li>
-            <li>web animations </li>
-            <li>24/7 customer care</li>
-            <li></li>
-          </ul>
-        </div>
-        <div class="price-box">
-          <i class="fas fa-code"></i>
-          <h2>Multi-page Website</h2>
-          <h4>Price: &#8358 7000</h4>
-          <ul>
-            <li>A multi-page website</li>
-            <li>web animations </li>
-            <li>web maintenance</li>
-            <li>24/7 customer care</li>
-            <li></li>
-          </ul>
-        </div>
-        <div class="price-box">
-          <i class="fas fa-mobile-alt"></i>
-          <h2>Responsive Website</h2>
-          <h4>Price: &#8358 15000</h4>
-          <ul>
-            <li>A rsponsive (single or multi)page website</li>
-            <li>web animations </li>
-            <li>web hosting</li>
-            <li>web maintenance</li>
-            <li>web consultancy</li>
-            <li>24/7 customer care</li>
-            <li></li>
-          </ul>
-        </div>
+    <div class="container" id="web package">
+      <h2 class="text-light
+      font-monospace">Website Packages</h2>
+      <div class="row justify-content-lg-between">
+        <div class="col-md-3 col-sm-6 ">
+          <div class="service-box">
+            <div class="service-icon orange">
+              <div class="front-content">
+                <i><img src="img/icon.png" class="m-auto" width="100" height="100"></i>
+                <h3>Free Website</h3>
+                <p class="text-bg-dark">Get your Free website by following me on my social handles</p>
 
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Responsive Website</h3>
+              <h4>Price: &#8358 00:00</h4>
+              <ul class="text-capitalize">
+                <li>A responsive Website</li>
+                <li>web animations </li>
+                <li>web hosting</li>
+                <li>web maintenance</li>
+                <li>24/7 customer care</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+          <div class="service-box">
+            <div class="service-icon yellow">
+              <div class="front-content">
+                <i class="bx bx-desktop"></i>
+                <h3>Basic Website</h3>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Basic Website</h3>
+              <h4>Price: &#8358 5000</h4>
+              <ul class="text-capitalize">
+                <li>A single page website</li>
+                <li>Web animations </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+          <div class="service-box">
+            <div class="service-icon orange">
+              <div class="front-content">
+                <i class="bx bx-code"></i>
+                <h3>Multi-page Website</h3>
+
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Multi-page Website</h3>
+              <h4>Price: &#8358 7000</h4>
+              <ul class="text-capitalize">
+                <li>A multi-page website</li>
+                <li>web animations </li>
+                <li>web maintenance</li>
+                <li>24/7 customer care</li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 ">
+          <div class="service-box">
+            <div class="service-icon orange">
+              <div class="front-content">
+                <i class="bx bx-mobile"></i>
+                <h3>Responsive Website</h3>
+
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Responsive Website</h3>
+              <h4>Price: &#8358 13000</h4>
+              <ul class="text-capitalize">
+                <li>A responsive Website</li>
+                <li>web animations </li>
+                <li>web hosting</li>
+                <li>web maintenance</li>
+                <li>24/7 customer care</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-    <section class="contact-me">
-      <h1>Contact me</h1>
-      <div class="cont-boxes">
-        <div class="cont-box">
-          <i class="fa fa-phone"></i>
-          <h2>Phone number</h2>
-          <h4>234-8109391090</h4>
+
+    </div>
+    <div class="container" id="Contact">
+      <h1 class="h1">Contact me</h1>
+      <div class="row justify-content-between">
+        <div class="col-md-3 col-sm-6 ">
+          <div class="service-box">
+            <div class="service-icon yellow">
+              <div class="front-content">
+                <i class="bx bx-envelope"></i>
+                <h3>E-mail</h3>
+              </div>
+            </div>
+            <div class="service-content">
+              <i class="bx bx-envelope"></i>
+              <h3>E-mail</h3>
+              <p>jadegboye581@gmail.com</p>
+            </div>
+          </div>
         </div>
-        <div class="cont-box">
-          <i class="fa fa-mail-bulk"></i>
-          <h2>E-mail</h2>
-          <h4>jadegboye581@gmail.com</h4>
+        <div class="col-md-3 col-sm-6 ">
+          <div class="service-box">
+            <div class="service-icon orange">
+              <div class="front-content">
+                <i class="bx bx-phone"></i>
+                <h3>Phone Number</h3>
+              </div>
+            </div>
+            <div class="service-content">
+              <i class="bx bx-phone"></i>
+              <h3>Phone Number</h3>
+              <p>234-8109391090</p>
+            </div>
+          </div>
         </div>
-        <div class="cont-box">
-          <i class="fa fa-"></i>
-          <h2>Social-media</h2>
-          <h4>
-            <a href="https://web.facebook.com/profile.php?id=100076865053766" target="_blank"><i
-                class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/ade4realwebdev/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/2348109391090" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          </h4>
+        <div class="col-md-3 col-sm-6">
+          <h1 class="service-box ">
+            <div class="service-icon red">
+              <div class="front-content">
+                <h3>Social Media</h3>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Social media</h3>
+              <h1><a href="https://web.facebook.com/profile.php?id=100076865053766" target="_blank"><i
+                    class="fab fa-facebook"></i></a></h1>
+              <h1><a href="https://www.instagram.com/ade4realwebdev/" target="_blank"><i
+                    class="fab fa-instagram"></i></a></h1>
+              <h1><a href="https://wa.me/2348109391090" target="_blank"><i class="fab fa-whatsapp"></i></a></h1>
+            </div>
         </div>
       </div>
-    </section>
+
+    </div>
   </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">

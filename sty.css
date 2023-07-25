@@ -4,6 +4,12 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+background: url(img/back.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*
 .header {
     position: fixed;
     width: 100%;
@@ -129,12 +135,6 @@
 
 
 }
-.background {
-    background: url(img/wall\ \(58\).jpg) center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .header {
     width: 100%;
     height: auto;
@@ -148,35 +148,12 @@
     z-index: 10;
 }
 
-.baner {
-    height: auto;
-    background: url(img/wall\ \(33\).jpg) center center;
-    background-size: cover;
-}
-
-.overlay {
-    
-  height: 100vh;
-    background: rgba(0, 0, 0, .3);
-    z-index: 1;
-}
-
-.baner h1 {
-    color: #fff;
-    font-size: 5em;
-    font-family: lugrasimo;
-    font-weight: 900;
-    position: absolute;
-    top: 20vh;
-    font-variant: small-caps;
-    text-align: center;
-    padding: 5%;
-}
 
 /* CSS for Hire Me Page */
 .questionnaire {
     padding: 40px;
     color: white;
+margin-top: 15vh;
 }
 
 .questionnaire h2 {
@@ -315,9 +292,9 @@
     background: linear-gradient(90deg, #00fc3f, #09ff00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
-/* CSS for Footer */
+CSS for Footer
 .footer {
     background: #000;
     color: #fff;
