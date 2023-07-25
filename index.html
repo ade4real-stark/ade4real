@@ -7,11 +7,15 @@
   <title>Ade4real</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/all.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
 <body>
-  <!--My Header which contains my navbar-->
+  <!--
+  <div>
+
   <header class="header">
     <div class="logo">
       <img src="img/logo.png" alt="mylogo">
@@ -31,8 +35,7 @@
     </nav>
     <label for="nav-check" class="hamburger"><i class="fa fa-bars"></i></label>
   </header>
-  <!---My Banner-->
-  <div class="banner" id="1">
+    <div class="banner" id="1">
     <div class="overlay"><img src="" alt=""></div>
     <div class="info">
       <h3>Web developer</h3>
@@ -59,7 +62,7 @@
           even a
           website with Pinterest-inspired features.
         </p>
-        <!-- <button type="submit" class="submit"><a href="" target="_blank">Learn More</a></button> -->
+         <button type="submit" class="submit"><a href="" target="_blank">Learn More</a></button> 
       </div>
 
     </div>
@@ -124,14 +127,12 @@
     </div>
   </div>
 
-  <!---Hire Me-->
   <div class="hire">
     <h1>let me get you a beautiful website.</h1>
     <div class="h">
       <a href="hire.html">hire me</a>
     </div>
-  </div> -->
-  <!---My Foot-->
+  </div>
   <footer class="foot">
     <h1>Adegboye <span>jesutofunmi</span></h1>
     <h3>To get your website,kindly contact me through my social media links below</h3>
@@ -143,6 +144,270 @@
     </div>
     <p>&copy; 2023 Ade4real. All rights reserved.</p>
   </footer>
+  </div> 
+-->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-black fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-light" href="index.html">
+        <img src="img/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-center text-light">
+        <h1 class="font-monospace">Ade<span>4real</span></h1>
+      </a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
+          class="navbar-toggler-icon bg-light"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center align-items-center font-monospace">
+          <li class="nav-item">
+            <a class="nav-link link-light active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#work">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="hire.html">Hire Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="p-5 text-center bg-image" id="home">
+    <div class="d-flex justify-content-center align-items-center ">
+      <div class="text-white list-group-horizontal-md">
+        <h1>I'm <br> Adegboye <br><span>Jesutofunmi</span></h1>
+        <h4 class="p-3 font-monospace"> A Web Developer</h4>
+        <a class="btn btn-outline-primary btn-lg link-light" href="hire.html" role="button">Hire me Now!</a>
+      </div>
+    </div>
+  </div>
+  <div class="about" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/me.jpg" alt="About Me" class="img-thumbnail rounded-pill about-img">
+        </div>
+        <div class="col-lg-6">
+          <div class="info2">
+            <h1>About Me</h1>
+            <h3>Hi, I'm Adegboye!</h3>
+            <p>I am a passionate web developer with expertise in HTML, CSS, and JavaScript. I love creating beautiful
+              and
+              functional websites that deliver a great user experience. With several years of experience in the
+              industry,
+              I'm committed to providing high-quality web development services to my clients.</p>
+            <a href="about.html" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="services">
+    <h1>My Services
+      <hr>
+    </h1>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 ">
+        <div class="service-box">
+          <div class="service-icon yellow">
+            <div class="front-content">
+              <i class="bx bx-trophy"></i>
+              <h3>design</h3>
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>design</h3>
+            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not
+              know how to pursue pleasure</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 ">
+        <div class="service-box">
+          <div class="service-icon orange">
+            <div class="front-content">
+              <i class="bx bx-anchor"></i>
+              <h3>php</h3>
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>php developer</h3>
+            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not
+              know how to pursue pleasure</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service-box ">
+          <div class="service-icon red">
+            <div class="front-content">
+              <i class="bx bx-paint"></i>
+              <h3>Ui Developer</h3>
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>Developer</h3>
+            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not
+              know how to pursue pleasure</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service-box">
+          <div class="service-icon grey">
+            <div class="front-content">
+              <i class="bx bx-paper-plane"></i>
+              <h3>java script</h3>
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>java script</h3>
+            <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not
+              know how to pursue pleasure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill-box" id="skills">
+    <h1>Skills
+      <hr>
+    </h1>
+    <div class="skills-circle">
+      <ul>
+        <li data-percent="80"><span class="text">HTML5</span><span class="bar-circle-right"></span><span
+            class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+        <li data-percent="65"><span class="text">CSS3</span><span class="bar-circle-right"></span><span
+            class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+        <li data-percent="35"><span class="text">JavaScript</span><span class="bar-circle-right"></span><span
+            class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-lg " id="work">
+    <h1>My work<hr></h1>
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="img/wall (33).jpg" class="img-thumbnail">
+      </div>
+      <div class="col-lg-6">
+        <h2>A Landing Page</h2>
+        <h6>Made with CSS3&HTML5</h6>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, quas quae quis non architecto quia minima
+          incidunt iure quisquam accusantium iusto distinctio aperiam commodi eos cum in consequuntur repudiandae! Quos
+          autem consectetur laboriosam laudantium. Magnam eveniet consequatur quisquam minima odio in amet, ex fuga
+          blanditiis, saepe eaque dolorem corrupti odit. Modi temporibus repellendus, nesciunt pariatur voluptas porro
+          impedit magni nulla suscipit inventore, nostrum mollitia consequatur distinctio, accusantium rerum unde ea.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>A Landing Page</h2>
+        <h6>Made with CSS3&HTML5</h6>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, quas quae quis non architecto quia minima
+          incidunt iure quisquam accusantium iusto distinctio aperiam commodi eos cum in consequuntur repudiandae! Quos
+          autem consectetur laboriosam laudantium. Magnam eveniet consequatur quisquam minima odio in amet, ex fuga
+          blanditiis, saepe eaque dolorem corrupti odit. Modi temporibus repellendus, nesciunt pariatur voluptas porro
+          impedit magni nulla suscipit inventore, nostrum mollitia consequatur distinctio, accusantium rerum unde ea.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/wall (33).jpg" class="img-thumbnail">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="img/wall (33).jpg" class="img-thumbnail">
+      </div>
+      <div class="col-lg-6">
+        <h2>A Landing Page</h2>
+        <h6>Made with CSS3&HTML5</h6>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, quas quae quis non architecto quia minima
+          incidunt iure quisquam accusantium iusto distinctio aperiam commodi eos cum in consequuntur repudiandae! Quos
+          autem consectetur laboriosam laudantium. Magnam eveniet consequatur quisquam minima odio in amet, ex fuga
+          blanditiis, saepe eaque dolorem corrupti odit. Modi temporibus repellendus, nesciunt pariatur voluptas porro
+          impedit magni nulla suscipit inventore, nostrum mollitia consequatur distinctio, accusantium rerum unde ea.
+        </p>
+      </div>
+      
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.skill-box').find('b').each(function (i) {
+        return $(this).prop('Counter', 0).animate({
+          Counter: $(this).parent().data('percent')
+        }, {
+          duration: 1000,
+          easing: 'swing',
+          step(now) {
+            return $(this).text(Math.ceil(now) + '%');
+          }
+        });
+      });
+
+      return $('.skill-box .skills-circle li').each(function (i) {
+        const _right = $(this).find('.bar-circle-right');
+        const _left = $(this).find('.bar-circle-left');
+        const _percent = $(this).attr('data-percent');
+        let deg = 3.6 * _percent;
+        if (_percent <= 50) {
+          return _right.animate({
+            circle_rotate: deg
+          }, {
+            step(deg) {
+              $(this).css('transform', `rotate(${deg}deg)`);
+            },
+            duration: 1000
+          });
+        } else {
+          const full_deg = 180;
+          deg -= full_deg;
+          let run_duration = 1000 * (50 / _percent);
+          return _right.animate({
+            circle_rotate: full_deg
+          }, {
+            step(full_deg) {
+              $(this).css('transform', `rotate(${full_deg}deg)`);
+            },
+            duration: run_duration,
+            easing: 'linear',
+            complete() {
+              run_duration -= 1000;
+              _left.css({
+                'clip': 'rect(0, 150px, 150px, 75px)',
+                'background': '#B0DAB9'
+              });
+              return _left.animate({
+                circle_rotate: deg
+              }, {
+                step(deg) {
+                  $(this).css('transform', `rotate(${deg}deg)`);
+                },
+                duration: Math.abs(run_duration),
+                easing: 'linear'
+              });
+            }
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
