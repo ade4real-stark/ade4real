@@ -46,6 +46,8 @@ scroll-margin-top: 15vh;
 }
 .about .img{
   margin-top:40px;
+  background-position: center center;
+  background-size: cover;
 }
 .h1 {
   font-size: 25px;
@@ -144,7 +146,27 @@ scroll-margin-top: 15vh;
 .grey {
   background-color: #333131;
 }
-
+.purple {
+  background-color: #ff00d4;
+}
+.aqua {
+  background-color: #00ffdd;
+}
+.green {
+  background-color: #00ff0d;
+}
+.black {
+  background-color: #000000;
+}
+.blue {
+  background-color: #0004ff;
+}
+.gradient {
+  background: linear-gradient(purple,aqua);
+}
+.gradient2 {
+  background: linear-gradient(aqua,salmon);
+}
 .service-box:hover .service-icon {
   opacity: 0;
   -webkit-transform: translateY(-110px) rotateX(90deg);
@@ -162,7 +184,7 @@ scroll-margin-top: 15vh;
   -o-transform: rotateX(0);
   transform: rotateX(0);
 }
-.skill-box {
+/* .skill-box {
   width: 80%;
   margin-top: 3%;
   margin-bottom: auto;
@@ -243,7 +265,7 @@ scroll-margin-top: 15vh;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
+} */
 .foot {
   height: auto;
   align-items: center;
@@ -262,16 +284,6 @@ scroll-margin-top: 15vh;
   text-align: center;
 }
 
-.foot h3 {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  font-family: "Courier New", Courier, monospace;
-  padding: 2%;
-}
-
 .foot a .fab {
   font-size: 2em;
   width: 60px;
@@ -284,4 +296,11 @@ scroll-margin-top: 15vh;
 .foot a .fab:hover{
   color: black;
   background: #fff;
+}
+@media (max-width:850px) {
+  #work .row .col-lg-6{
+    border: 2px dashed gray;
+  margin: 10px;
+  padding: 10px;
+  }
 }
