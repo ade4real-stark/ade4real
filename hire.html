@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
+
 <body>
   <!-- Header -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -50,13 +52,13 @@
       <label for="email" class="form-label">Email</label>
       <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-1" required>
       <label for="project-type">What type of project do you need?</label>
-      <select name="project-type" class="form-select mb-1 border-black" required>
+      <select name="project-plan" class="form-select mb-1 border-black" required>
         <option value="none">Select Your Choice</option>
         <option value="Blog website">Blog website</option>
         <option value="Portfolio website">Portfolio website</option>
         <option value="Landing page website">Landing page</option>
         <option value="Personal website">Personal Website</option>
-
+        
       </select>
       <label for="project-description">Please provide a brief description of your project:</label>
       <textarea id="project-description" name="project-description" rows="2" class="form-control mb-1 border-black"
@@ -77,7 +79,18 @@
         <input type="radio" name="Category">
         <label for="radio">others</label>
       </div>
-      <button class="btn btn-primary" type="submit" value="Go!">Submit</button>
+      <div class="radio">
+        <label for="radio">Choose Your Plan </label required>
+        <input type="radio" name="Category">
+        <label for="radio">Free Website</label>
+        <input type="radio" name="Category">
+        <label for="radio">Basic Website</label>
+        <input type="radio" name="Category">
+        <label for="radio">Multi-page Website</label>
+        <input type="radio" name="Category">
+        <label for="radio">Responsive Website</label>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
   <div class="container" id="web-package">
@@ -101,7 +114,6 @@
               <li>web animations </li>
               <li>web hosting</li>
               <li>web maintenance</li>
-              <li></li>
             </ul>
           </div>
         </div>
