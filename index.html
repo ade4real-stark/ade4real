@@ -169,25 +169,17 @@
       </div>
     </div>
   </div>
-  <!-- <div class="skill-box" id="skills">
-    <h1 class="h1">Skills
-      <hr>
-    </h1>
-    <div class="skills-circle">
-      <ul>
-      <li data-percent="80"><span class="text">HTML5</span><span class="bar-circle-right"></span><span
-          class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-      <li data-percent="65"><span class="text">CSS3</span><span class="bar-circle-right"></span><span
-          class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-
-        <li data-percent="35"><span class="text">JavaScript</span><span class="bar-circle-right"></span><span
-            class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-        <li data-percent="25"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span
-            class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-
-      </ul>
-    </div>
-  </div> -->
+<div class="skill-box" id="skills">
+  <h1 class="h1">Skills</h1>
+  <div class="skills-circle">
+    <ul>
+      <li data-percent="80"><span class="text">HTML5</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+      <li data-percent="65"><span class="text">CSS3</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+      <li data-percent="35"><span class="text">JavaScript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+    <li data-percent="25"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+    </ul>
+  </div>
+</div>
   <div class="container" id="work">
     <h1 class="h1">My work
       <hr>
@@ -269,66 +261,67 @@
   <div class="container-fluid"><a href="https://pngtree.com/?sce=af&id=16014"><img src="img/d4535984591aefcfa6f5772b811a6715/promotional resource/promotional image/5.png" class="img-thumbnail" alt="ad"></a></div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
   <script>
-    $(document).ready(function () {
-      $('.skill-box').find('b').each(function (i) {
-        return $(this).prop('Counter', 0).animate({
-          Counter: $(this).parent().data('percent')
-        }, {
-          duration: 1000,
-          easing: 'swing',
-          step(now) {
-            return $(this).text(Math.ceil(now) + '%');
-          }
-        });
-      });
+   $(document).ready(function () {
+  $('.skill-box').find('b').each(function (i) {
+    return $(this).prop('Counter', 0).animate({
+      Counter: $(this).parent().data('percent')
+    }, {
+      duration: 6000,
+      easing:'swing',
+      step(now) {
+        return $(this).text(Math.ceil(now) + '%');
+      }
+    });
+  });
 
-      return $('.skill-box .skills-circle li').each(function (i) {
-        const _right = $(this).find('.bar-circle-right');
-        const _left = $(this).find('.bar-circle-left');
-        const _percent = $(this).attr('data-percent');
-        let deg = 3.6 * _percent;
-        if (_percent <= 50) {
-          return _right.animate({
+  return $('.skill-box .skills-circle li').each(function (i) {
+    const _right = $(this).find('.bar-circle-right');
+    const _left = $(this).find('.bar-circle-left');
+    const _percent = $(this).attr('data-percent');
+    let deg = 3.6 * _percent;
+    if (_percent <= 50) {
+      return _right.animate({
+        circle_rotate: deg
+      }, {
+        step(deg) {
+          $(this).css('transform', `rotate(${deg}deg)`);
+        },
+        duration: 1000
+      });
+    } else {
+      const full_deg = 180;
+      deg -= full_deg;
+      let run_duration = 6000 * (50 / _percent);
+      return _right.animate({
+        circle_rotate: full_deg
+      }, {
+        step(full_deg) {
+          $(this).css('transform', `rotate(${full_deg}deg)`);
+        },
+        duration: run_duration,
+        easing: 'linear',
+        complete() {
+          run_duration -= 1000;
+          _left.css({
+            'clip': 'rect(0, 150px, 150px, 75px)',
+            'background': '#00f'
+          });
+          return _left.animate({
             circle_rotate: deg
           }, {
             step(deg) {
               $(this).css('transform', `rotate(${deg}deg)`);
             },
-            duration: 1000
-          });
-        } else {
-          const full_deg = 180;
-          deg -= full_deg;
-          let run_duration = 1000 * (50 / _percent);
-          return _right.animate({
-            circle_rotate: full_deg
-          }, {
-            step(full_deg) {
-              $(this).css('transform', `rotate(${full_deg}deg)`);
-            },
-            duration: run_duration,
-            easing: 'linear',
-            complete() {
-              run_duration -= 1000;
-              _left.css({
-                'clip': 'rect(0, 150px, 150px, 75px)',
-                'background': '#B0DAB9'
-              });
-              return _left.animate({
-                circle_rotate: deg
-              }, {
-                step(deg) {
-                  $(this).css('transform', `rotate(${deg}deg)`);
-                },
-                duration: Math.abs(run_duration),
-                easing: 'linear'
-              });
-            }
+            duration: Math.abs(run_duration),
+            easing: 'linear'
           });
         }
       });
-    });
+    }
+  });
+});
   </script>
 </body>
 
