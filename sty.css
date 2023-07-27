@@ -5,8 +5,7 @@
     list-style: none;
     text-decoration: none;
 }
-/*
-.header {
+/*.header {
     position: fixed;
     width: 100%;
     height: auto;
@@ -375,4 +374,4 @@ CSS for Footer
         display: none;
     }
 
-}
+} 

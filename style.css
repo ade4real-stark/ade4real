@@ -1,12 +1,13 @@
 *{
   scroll-behavior: smooth !important;
 scroll-margin-top: 15vh;
-}
-.color {
+transition: .5s linear;
+ }
+/*.color {
   background: linear-gradient(90deg, #00fc3f, #00ffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 .navbar{
   background: rgba(0, 0, 0, 0.5);
 }
