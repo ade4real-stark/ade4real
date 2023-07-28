@@ -50,46 +50,42 @@
         <input type="text" name="Last Name" placeholder="Last Name" class="form-control m-1" required>
       </div>
       <label for="email" class="form-label">Email</label>
-      <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-1" required>
+      <input type="email" name="Email" placeholder="Enter Your Email" class="form-control mb-1" required>
       <label for="project-type">What type of project do you need?</label>
-      <select name="project-plan" class="form-select mb-1 border-black" required>
+      <select name="Project-type" class="form-select mb-1 border-black" required>
         <option value="none">Select Your Choice</option>
         <option value="Blog website">Blog website</option>
         <option value="Portfolio website">Portfolio website</option>
         <option value="Landing page website">Landing page</option>
         <option value="Personal website">Personal Website</option>
-        
+
       </select>
       <label for="project-description">Please provide a brief description of your project:</label>
-      <textarea id="project-description" name="project-description" rows="2" class="form-control mb-1 border-black"
+      <textarea  name="Project-description" rows="2" class="form-control mb-1 border-black"
         required></textarea>
       <label for="price">What is your budget for this project?</label>
       <div class="input-group">
-        <div class="input-group-text border border-danger">&#8358</div>
-        <input type="number" name="Price" placeholder="Enter Your Amount" class="form-control" required>
+        <div class="input-group-text border border-dark">&#8358</div>
+        <input type="number" name="Project-price" placeholder="Enter Your Amount" class="form-control" required>
       </div>
-      <div class="radio">
-        <label for="radio">Which category do you belong to?</label required>
-        <input type="radio" name="Category">
-        <label for="radio">student</label>
-        <input type="radio" name="Category">
-        <label for="radio">UI/UX Developer</label>
-        <input type="radio" name="Category">
-        <label for="radio">Business</label>
-        <input type="radio" name="Category">
-        <label for="radio">others</label>
-      </div>
-      <div class="radio">
-        <label for="radio1">Choose Your Plan </label required>
-        <input type="radio" name="plan">
-        <label for="radio1">Free Website</label>
-        <input type="radio" name="plan">
-        <label for="radio1">Basic Website</label>
-        <input type="radio" name="plan">
-        <label for="radio1">Multi-page Website</label>
-        <input type="radio" name="plan">
-        <label for="radio1">Responsive Website</label>
-      </div>
+    <label for="Categories">What category do you belong to?</label>
+    <select name="Categories" class="form-select mb-1 border-black" required>
+      <option value="none">Select Your Choice</option>
+      <option value="Student">Student</option>
+      <option value="UI/UX Developer">UI/UX Developer</option>
+      <option value="Business">Business</option>
+      <option value="Others">Others</option>
+    
+    </select>
+    <label for="web-package">Choose a web-package for your project</label>
+    <select name="web-package" class="form-select mb-1 border-black text-capitalize" required>
+      <option value="none">Select Your Choice</option>
+      <option value="Free website">free website</option>
+      <option value="Basic Website">basic Website</option>
+      <option value="multi-page website">multi-page website</option>
+      <option value="responsive website">responsive Website</option>
+    
+    </select>
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
