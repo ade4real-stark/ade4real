@@ -3,11 +3,11 @@
 scroll-margin-top: 15vh;
 transition: .5s linear;
  }
-/*.color {
+.color {
   background: linear-gradient(90deg, #00fc3f, #00ffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+} 
 .navbar{
   background: rgba(0, 0, 0, 0.5);
 }
@@ -26,6 +26,14 @@ transition: .5s linear;
   background-size: cover;
   height: 100vh;
   width: 100%;
+ }
+ .about-img{
+  width: 500px;
+  height: 500px;
+  background: url(img/me1.jpg) center;
+  background-size: cover;
+  zoom: 110%;
+  border-radius: 50%;
  }
 .text-white{
   transform: translateY(50%);
